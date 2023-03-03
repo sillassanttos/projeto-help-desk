@@ -1,3 +1,8 @@
+<?php
+
+  session_start();
+
+?>
 <html>
 
 <head>
@@ -46,6 +51,14 @@
               ?>
               <div class="text-danger">
                 Usuário ou senha inválidos(s)
+              </div>
+              <?php } ?>
+
+              <?php
+                if (isset($_GET['login']) && $_GET['login'] == 'erro2') {
+              ?>
+              <div class="text-danger">
+                Faça login para acessar o sistema!
               </div>
               <?php } ?>
 
