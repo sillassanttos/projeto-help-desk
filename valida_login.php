@@ -17,7 +17,7 @@
 
   if ($usuario_autenticado) {
     $_SESSION['autenticado'] = 'SIM';
-    //header('Location: home.php');
+    header('Location: home.php');
 
   } else {
     $_SESSION['autenticado'] = 'NAO';
