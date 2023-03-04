@@ -59,15 +59,21 @@
               <?php foreach($chamados as $chamado) {
                 $item = explode('#', $chamado);
 
-                if (count($item) < 3) {
+                if ($_SESSION['usuario_perfil_id'] == 2) {
+                  if ($_SESSION['usuario_id'] != $item[0]) {
+                    continue;
+                  }
+                }
+
+                if (count($item) < 4) {
                   continue;
                 }
               ?>
                 <div class="card mb-3 bg-light">
                   <div class="card-body">
-                    <h5 class="card-title"><?php echo $item[0] ?></h5>
-                    <h6 class="card-subtitle mb-2 text-muted"><?php echo $item[1] ?></h6>
-                    <p class="card-text"><?php echo $item[2] ?></p>
+                    <h5 class="card-title"><?php echo $item[1] ?></h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><?php echo $item[2] ?></h6>
+                    <p class="card-text"><?php echo $item[3] ?></p>
                   </div>
                 </div>
               <?php } ?>
