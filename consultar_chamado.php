@@ -4,7 +4,7 @@
 
   $chamados = array();
 
-  $arquivo = fopen('arquivo.hd', 'r');
+  $arquivo = fopen('private/arquivo.hd', 'r');
 
   while (!feof($arquivo)) {
     $registro = fgets($arquivo);

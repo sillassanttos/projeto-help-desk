@@ -2,7 +2,7 @@
 
   session_start();
 
-  $arquivo = fopen('arquivo.hd', 'a');
+  $arquivo = fopen('private/arquivo.hd', 'a');
 
   $titulo = str_replace('#', '-', $_POST['titulo']);
   $categoria = str_replace('#', '-', $_POST['categoria']);
